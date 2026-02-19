@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional Admin Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="dashboard">
+    <aside class="sidebar" id="sidebar">
+        <h2>Admin</h2>
+        <ul>
+            <li class="active">Dashboard</li>
+            <li>Users</li>
+            <li>Orders</li>
+            <li>Reports</li>
+            <li>Settings</li>
+        </ul>
+    </aside>
+
+    <main class="main">
+        <header>
+            <button onclick="toggleSidebar()">☰</button>
+            <h1>Dashboard Overview</h1>
+        </header>
+
+        <section class="cards">
+            <div class="card">
+                <h3>Total Users</h3>
+                <p id="usersCount">0</p>
+            </div>
+            <div class="card">
+                <h3>Total Orders</h3>
+                <p id="ordersCount">0</p>
+            </div>
+            <div class="card">
+                <h3>Revenue</h3>
+                <p id="revenueCount">₹0</p>
+            </div>
+        </section>
+
+        <section class="table-section">
+            <h2>Recent Orders</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Customer</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="ordersTable"></tbody>
+            </table>
+        </section>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
